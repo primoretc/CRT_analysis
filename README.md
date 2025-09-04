@@ -42,12 +42,15 @@ sudo yum install wget openssl
 **Expression** ```{Your_Host:check_crl_expiry.sh.last()}=1```
 
 **Severity:** ```Warning```
+
 **Name:**  ```CRL will expire in 14 days```
 
 Для критического состояния (просроченный CRL):
 
 **Expression** ```{Your_Host:check_crl_expiry.sh.last()}=2```
+
 **Severity:** ```High```
+
 **Name:** ```CRL has expired```
 
 ## Важные замечания:
