@@ -7,7 +7,7 @@ Bash скрипт будет отслеживать дату окончания 
 
 Сделайте скрипт исполняемым:
 
-'''bash
+bash'''
 chmod +x /usr/lib/zabbix/alertscripts/check_crl_expiry.sh
 chown zabbix:zabbix /usr/lib/zabbix/alertscripts/check_crl_expiry.sh
 '''
