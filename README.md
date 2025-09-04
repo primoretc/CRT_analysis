@@ -3,15 +3,15 @@ Bash скрипт будет отслеживать дату окончания 
 Скрипт будет проверять поле Next Update в CRL-файле и вычислять, сколько дней осталось до этой даты. Если до истечения срока осталось 14 дней или меньше, скрипт вернет значение 1 и 2 если срок истек. Это буду использовать в Zabbix для генерации триггера.
 
 ## Настройка в Zabbix:
-Сохраните скрипт на сервере Zabbix, например, в /usr/lib/zabbix/alertscripts/check_crl_expiry.sh
+Сохранить скрипт на сервере Zabbix, например, в /usr/lib/zabbix/alertscripts/check_crl_expiry.sh
 
-Сделайте скрипт исполняемым:
+Сделать скрипт исполняемым:
 
 ```
 chmod +x /usr/lib/zabbix/alertscripts/check_crl_expiry.sh
 chown zabbix:zabbix /usr/lib/zabbix/alertscripts/check_crl_expiry.sh
 ```
-Установите зависимости (если не установлены):
+Установить зависимости (если не установлены):
 
 ```
 #Для Debian/Ubuntu:
@@ -21,7 +21,7 @@ sudo apt install wget openssl
 sudo yum install wget openssl
 ```
 
-Настройте элемент данных в Zabbix:
+Настроить элемент данных в Zabbix:
 ```
 Name: CRL Expiry Check
 
@@ -51,4 +51,4 @@ Severity: High
 Name: CRL has expired
 ```
 
-Настройте оповещения через Actions в Zabbix.
+Настроить оповещения через Actions в Zabbix.
