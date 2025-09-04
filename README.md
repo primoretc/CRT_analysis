@@ -22,6 +22,11 @@ sudo apt install wget openssl
 #Для CentOS/RHEL:
 sudo yum install wget openssl
 ```
+Создать временную папку для скачиваемого файла
+
+``` 
+sudo mkdir -p /tmp/zabbix_crl_check
+```
 
 Настроить элемент данных в Zabbix:
 
