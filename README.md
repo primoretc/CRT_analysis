@@ -7,19 +7,19 @@ Bash скрипт будет отслеживать дату окончания 
 
 Сделайте скрипт исполняемым:
 
-bash'''
+```
 chmod +x /usr/lib/zabbix/alertscripts/check_crl_expiry.sh
 chown zabbix:zabbix /usr/lib/zabbix/alertscripts/check_crl_expiry.sh
-'''
+```
 Установите зависимости (если не установлены):
 
-'''bash
-#### #Для Debian/Ubuntu:
+bash```
+#Для Debian/Ubuntu:
 sudo apt install wget openssl
 
-#### #Для CentOS/RHEL:
+#Для CentOS/RHEL:
 sudo yum install wget openssl
-'''
+```
 Настройте элемент данных в Zabbix:
 
 Name: CRL Expiry Check
