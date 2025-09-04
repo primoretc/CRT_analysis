@@ -13,15 +13,16 @@ chown zabbix:zabbix /usr/lib/zabbix/alertscripts/check_crl_expiry.sh
 ```
 Установите зависимости (если не установлены):
 
-bash```
+```
 #Для Debian/Ubuntu:
 sudo apt install wget openssl
 
 #Для CentOS/RHEL:
 sudo yum install wget openssl
 ```
-Настройте элемент данных в Zabbix:
 
+Настройте элемент данных в Zabbix:
+```
 Name: CRL Expiry Check
 
 Type: External check
@@ -31,22 +32,23 @@ Key: check_crl_expiry.sh
 Type of information: Numeric (unsigned)
 
 Update interval: 1d (раз в день)
-
+```
 Создайте триггеры:
 
 Для предупреждения об истечении срока:
 
-'''
+```
 {Your_Host:check_crl_expiry.sh.last()}=1
-'''
+
 Severity: Warning
 Name: CRL will expire in 14 days
-
+```
 Для критического состояния (просроченный CRL):
 
-text
+```
 {Your_Host:check_crl_expiry.sh.last()}=2
 Severity: High
 Name: CRL has expired
+```
 
 Настройте оповещения через Actions в Zabbix.
