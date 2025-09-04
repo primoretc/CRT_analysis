@@ -25,7 +25,7 @@ sudo yum install wget openssl
 
 Настроить элемент данных в Zabbix:
 
-**Name:** ``` CRL Expiry Check``
+**Name:** ```CRL Expiry Check```
 
 **Type:** ```External check```
 
